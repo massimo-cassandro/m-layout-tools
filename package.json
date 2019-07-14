@@ -1,0 +1,24 @@
+{
+  "name": "layout-tools",
+  "version": "2.0.0",
+  "description": "Layout development Utilities",
+  "main": "js/layout_tools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/massimo-cassandro/layout-tools.git"
+  },
+  "author": "Massimo Cassandro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/massimo-cassandro/layout-tools/issues"
+  },
+  "homepage": "https://github.com/massimo-cassandro/layout-tools#readme",
+  "files": [
+    "dist/*.{css,js,map}",
+    "js/*.js",
+    "scss/*.scss"
+  ]
+}

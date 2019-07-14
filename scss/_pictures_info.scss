@@ -1,0 +1,29 @@
+.lt-position-relative {
+  position: relative;
+}
+.lt-picture-info-wrapper {
+  position: absolute;
+  top:20px;
+  left:5px;
+  background: #fff;
+  padding: 6px;
+  font-size: .8rem;
+  summary {
+    white-space: nowrap;
+  }
+
+  table {
+    border-top:1px solid $lt-color;
+    width:100%;
+    th, td {
+      padding:2px 4px;
+      border-bottom:1px solid $lt-color;
+      text-align: left;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    th {
+      font-weight: bold;
+    }
+  }
+}
