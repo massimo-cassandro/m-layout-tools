@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/massimo-cassandro/layout-tools.git"
+    "url": "git+https://github.com/massimo-cassandro/layout-tools.git#master"
   },
   "author": "Massimo Cassandro",
   "license": "MIT",
