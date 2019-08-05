@@ -15,7 +15,7 @@ npm i --save-dev m-layout-tools
 Aggiungere quindi alla pagina desiderata:
 
 ```html
-<script src="[path_to_layout_tools]/layout_tools/dist/layout_tools-min.js" data-fw="__framework__"></script>
+<script src="[path_to_layout_tools]/dist/layout_tools-min.js" data-fw="__framework__"></script>
 ```
 in cui `__framework__` corrisponde alla sigla del framework utilizzato: **bootstrap3**, **bootstrap4**, **foundation6**, ecc. (default: bootstrap4). 
 
