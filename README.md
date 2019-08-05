@@ -6,10 +6,10 @@ Versione 2
 
 ## Installazione
 
-Scaricare lo scritp con npm:
+Scaricare lo script con npm:
 
 ```shell
-npm i --save-dev git+https://github.com/massimo-cassandro/layout-tools.git#master
+npm i --save-dev m-layout-tools
 ```
 
 Aggiungere quindi alla pagina desiderata:
