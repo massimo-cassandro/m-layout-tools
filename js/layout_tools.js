@@ -14,7 +14,7 @@
 */
 
 var _LT = (() => {
-  "use strict";
+  'use strict';
 
   let lt = {
     vers: '2.0'
@@ -28,8 +28,8 @@ var _LT = (() => {
 
   // load css
   document.head.insertAdjacentHTML('beforeend',
-		'<link rel="stylesheet" href="' + lt.currentDir + '/layout_tools.css?v=' + lt.vers + '" type="text/css" media="all">'
-	);
+    '<link rel="stylesheet" href="' + lt.currentDir + '/layout_tools.css?v=' + lt.vers + '" type="text/css" media="all">'
+  );
   return lt;
 })();
 

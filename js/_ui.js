@@ -1,7 +1,7 @@
 /* globals _LT:true */
 
 _LT = (lt => {
-  "use strict";
+  'use strict';
 
   const wrapper_id = 'lt-wrapper';
 
@@ -19,8 +19,8 @@ _LT = (lt => {
   lt.brkpt_wrapper = document.querySelector('#' + wrapper_id + ' .lt-brkpt');
 
   // contrazione wrapper
-  lt.brkpt_wrapper.addEventListener("click", function () {
-    lt.wrapper.classList.toggle("lt-collapsed");
+  lt.brkpt_wrapper.addEventListener('click', function () {
+    lt.wrapper.classList.toggle('lt-collapsed');
   }, false);
 
   // wrapper invisibile

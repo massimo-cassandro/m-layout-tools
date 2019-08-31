@@ -1,7 +1,7 @@
-/* globals _LT:true */
+/* globals _LT:writable */
 
 _LT = (lt => {
-  "use strict";
+  'use strict';
 
   const default_settings = {
     hidden: false,

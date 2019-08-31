@@ -3,7 +3,7 @@
 //TODO imgs without picture and with size attribute
 
 _LT = (lt => {
-  "use strict";
+  'use strict';
 
   //ui
   lt.content_wrapper.insertAdjacentHTML('afterbegin',
@@ -13,48 +13,48 @@ _LT = (lt => {
   let pictures = document.getElementsByTagName('picture');
 
   const picturesInfoTrigger = lt.content_wrapper.querySelector('.lt-pictures-info-trigger'),
-  removePicturesInfo = () => {
-    [...pictures].forEach(element => {
-      element.querySelector('.lt-picture-info-wrapper').remove();
-      element.classList.remove('lt-position-relative');
-    });
-  },
+    removePicturesInfo = () => {
+      [...pictures].forEach(element => {
+        element.querySelector('.lt-picture-info-wrapper').remove();
+        element.classList.remove('lt-position-relative');
+      });
+    },
 
-  //img info
-  showPicturesInfo = () => {
+    //img info
+    showPicturesInfo = () => {
 
-    [...pictures].forEach(element => {
+      [...pictures].forEach(element => {
       // detect if picture element is positioned
-      let element_position = window.getComputedStyle(element).getPropertyValue('position');
+        let element_position = window.getComputedStyle(element).getPropertyValue('position');
 
-      const img_info_rows = () => {
-        const img_props = [
-          'src',
-          'currentSrc',
-          'srcset',
-          'sizes',
-          'media',
-          'width',
-          'height',
-          'naturalWidth',
-          'naturalHeight',
-          'id',
-          'className'
+        const img_info_rows = () => {
+          const img_props = [
+            'src',
+            'currentSrc',
+            'srcset',
+            'sizes',
+            'media',
+            'width',
+            'height',
+            'naturalWidth',
+            'naturalHeight',
+            'id',
+            'className'
           //'attributes'
-        ];
+          ];
 
-        let rows = '',
-          element_img = element.querySelector('img');
+          let rows = '',
+            element_img = element.querySelector('img');
 
-        img_props.forEach(prop => {
-          rows += `<tr><th scope="row">${prop}</th><td>${element_img[prop]? element_img[prop] : '&mdash;'}</td></tr>`;
-        });
+          img_props.forEach(prop => {
+            rows += `<tr><th scope="row">${prop}</th><td>${element_img[prop]? element_img[prop] : '&mdash;'}</td></tr>`;
+          });
 
-        return rows;
-      };
+          return rows;
+        };
 
-      element.insertAdjacentHTML('beforeend',
-        `<div class="lt-picture-info-wrapper">
+        element.insertAdjacentHTML('beforeend',
+          `<div class="lt-picture-info-wrapper">
           <details>
             <summary>Info</summary>
             <table>
@@ -64,14 +64,14 @@ _LT = (lt => {
             </table>
           </details>
         </div>`
-      );
+        );
 
-      if( element_position === 'static' ) {
-        element.classList.add('lt-position-relative');
-      }
+        if( element_position === 'static' ) {
+          element.classList.add('lt-position-relative');
+        }
 
-    }); // end foreach
-  }; // end showPicturesInfo
+      }); // end foreach
+    }; // end showPicturesInfo
 
 
   picturesInfoTrigger.addEventListener('click', () => {

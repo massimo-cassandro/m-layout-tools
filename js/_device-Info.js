@@ -1,7 +1,7 @@
 /* globals _LT:true */
 
 _LT = (lt => {
-  "use strict";
+  'use strict';
 
   //device info
 
