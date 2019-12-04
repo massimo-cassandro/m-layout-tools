@@ -25,11 +25,11 @@ var _LT = (() => {
   lt.currentDir = lt.currentDir.substring(0, lt.currentDir.lastIndexOf('/'));
 
   lt.framework = currentScript.dataset.fw || 'bootstrap4';
-  lt.css = currentScript.dataset.css || 'layout_tools.css';
+  lt.css = currentScript.dataset.css || lt.currentDir + '/layout_tools.css';
 
   // load css
   document.head.insertAdjacentHTML('beforeend',
-    '<link rel="stylesheet" href="' + lt.currentDir + '/' + lt.css + '?v=' + lt.vers + '" type="text/css" media="all">'
+    '<link rel="stylesheet" href="' + lt.css + '?v=' + lt.vers + '" type="text/css" media="all">'
   );
   return lt;
 })();
