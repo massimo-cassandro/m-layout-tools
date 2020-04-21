@@ -7,7 +7,7 @@
 		"uuidString": "56CEA7EE-2256-402A-8381-171C143CCE38"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32001",
 "files": {
 	"/.editorconfig": {
 		"cB": 0,
@@ -100,13 +100,13 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/_load-settings.js": {
+	"/js/_init.js": {
 		"bF": 4,
 		"ft": 64,
 		"ma": 1,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/dist/_load-settings-min.js",
+		"oAP": "/dist/_init-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -145,7 +145,7 @@
 		"tS": 1
 		},
 	"/js/layout_tools.js": {
-		"bF": 0,
+		"bF": 4,
 		"ft": 64,
 		"ma": 1,
 		"mi": 1,
@@ -153,7 +153,7 @@
 		"oAP": "/dist/layout_tools-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 1
+		"tS": 0
 		},
 	"/layout-tools.code-workspace": {
 		"cB": 0,
@@ -1141,6 +1141,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
+			},
 		"guard-for-in": {
 			"active": 0,
 			"optionString": ""
@@ -1317,6 +1321,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -1342,6 +1350,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -1645,6 +1657,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-setter-return": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-shadow": {
 			"active": 0,
 			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
@@ -1848,6 +1864,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,

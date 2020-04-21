@@ -1,5 +1,4 @@
-/* globals _LT:true */
-
+import {lt} from './_init';
 
 /*
   caricamento indicatori breakpoint e dimensioni viewport
@@ -12,8 +11,7 @@
 
 */
 
-_LT = (lt => {
-  'use strict';
+export default function () {
 
   let dt_params = {};
   dt_params.fw = document.currentScript.getAttribute('data-fw') || 'bootstrap4';
@@ -41,6 +39,4 @@ _LT = (lt => {
     lt.brkpt_wrapper.innerHTML = fw_breakpoints_map[dt_params.fw];
   }
 
-  return lt;
-
-})(_LT || {});
+}

@@ -1,10 +1,9 @@
-/* globals _LT:true */
+import {lt} from './_init';
 
-_LT = (lt => {
+export default function () {
   'use strict';
 
   //viewport info
-
   lt.content_wrapper.insertAdjacentHTML('afterbegin', '<div class="lt-vpinfo"></div>');
 
   const lt_vpinfo = lt.content_wrapper.querySelector('.lt-vpinfo'),
@@ -23,9 +22,17 @@ _LT = (lt => {
         '</details>';
     };
 
+
   getViewportSize();
-  window.onresize = getViewportSize;
+  if(ResizeObserver) {
 
-  return lt;
+    const resizeObserver = new ResizeObserver(() => {
+      getViewportSize();
+    });
 
-})(_LT || {});
+    resizeObserver.observe(document.body);
+
+  } else {
+    window.onresize = getViewportSize; // safari, ie
+  }
+}

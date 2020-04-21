@@ -1,8 +1,8 @@
-/* globals _LT:true */
+import {lt} from './_init';
 
 //TODO imgs without picture and with size attribute
 
-_LT = (lt => {
+export default function () {
   'use strict';
 
   //ui
@@ -89,4 +89,4 @@ _LT = (lt => {
     picturesInfoTrigger.checked = true;
   }
 
-})(_LT || {});
+}

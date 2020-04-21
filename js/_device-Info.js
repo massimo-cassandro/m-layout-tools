@@ -1,6 +1,6 @@
-/* globals _LT:true */
+import {lt} from './_init';
 
-_LT = (lt => {
+export default function () {
   'use strict';
 
   //device info
@@ -18,4 +18,4 @@ _LT = (lt => {
 
   return lt;
 
-})(_LT || {});
+}

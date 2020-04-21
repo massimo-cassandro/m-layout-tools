@@ -1,36 +1,18 @@
-/* eslint no-console: 0, no-unused-vars: 0, no-empty:  0 */
-/* exported _LT */
-/*
- * layout_tools.js - 2.0 / Massimo Cassandro / 2018-2019
-*/
+/**
+ * layout_tools.js - 3 / Massimo Cassandro / 2016-2020
+ */
 
-/*
-  @codekit-append '_load-settings.js'
-  @codekit-append '_ui.js'
-  @codekit-append '_breakpoints.js'
-  @codekit-append '_viewport-info.js'
-	@codekit-append '_device-info.js'
-  @codekit-append '_pictures-info.js'
-*/
 
-var _LT = (() => {
-  'use strict';
+import lt_init from './_init';
+import lt_ui from './_ui';
+import lt_brkpt from './_breakpoints';
+import lt_viewport_info from './_viewport-info';
+import lt_device_info from './_device-Info';
+import lt_pictures_info from './_pictures-info';
 
-  let lt = {
-    vers: '2.0'
-  };
-
-  let currentScript = document.currentScript;
-  lt.currentDir = currentScript.src.split('?')[0];
-  lt.currentDir = lt.currentDir.substring(0, lt.currentDir.lastIndexOf('/'));
-
-  lt.framework = currentScript.dataset.fw || 'bootstrap4';
-  lt.css = currentScript.dataset.css || lt.currentDir + '/layout_tools.css';
-
-  // load css
-  document.head.insertAdjacentHTML('beforeend',
-    '<link rel="stylesheet" href="' + lt.css + '?v=' + lt.vers + '" type="text/css" media="all">'
-  );
-  return lt;
-})();
-
+lt_init();
+lt_ui();
+lt_brkpt();
+lt_viewport_info();
+lt_device_info();
+lt_pictures_info();

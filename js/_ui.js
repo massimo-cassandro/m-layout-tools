@@ -1,6 +1,6 @@
-/* globals _LT:true */
+import {lt} from './_init';
 
-_LT = (lt => {
+export default function () {
   'use strict';
 
   const wrapper_id = 'lt-wrapper';
@@ -23,25 +23,26 @@ _LT = (lt => {
     lt.wrapper.classList.toggle('lt-collapsed');
   }, false);
 
-  // wrapper invisibile
-  const set_hidden = (add_storage) => {
-    lt.wrapper.classList.toggle('lt-hidden');
-    let is_hidden = lt.wrapper.classList.contains('lt-hidden');
-    hide_btn.innerHTML = is_hidden ? 'Mostra' : 'Nascondi';
-    if(add_storage) {
-      lt.store_settings({hidden: is_hidden});
-    }
-  };
-  const hide_btn = lt.content_wrapper.querySelector('.lt-hide-show');
+  // layout tools e sf toolbar invisibili invisibile
+  const hide_btn = lt.content_wrapper.querySelector('.lt-hide-show'),
+    sf_toolbar = document.querySelector('.sf-toolbar'),
+    set_hidden = (add_storage) => {
+      lt.wrapper.classList.toggle('lt-hidden');
+      let is_hidden = lt.wrapper.classList.contains('lt-hidden');
+      if(sf_toolbar) {
+        sf_toolbar.toggleAttribute('hidden', is_hidden);
+      }
+      hide_btn.innerHTML = is_hidden ? 'Mostra' : 'Nascondi';
+      if(add_storage) {
+        lt.store_settings({hidden: is_hidden});
+      }
+    };
+
   hide_btn.addEventListener('click', () => {
     set_hidden(true);
-
   },false);
 
   if(lt.settings.hidden) {
     set_hidden(false);
   }
-
-  return lt;
-
-})(_LT || {});
+}
