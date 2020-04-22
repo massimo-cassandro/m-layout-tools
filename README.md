@@ -37,4 +37,7 @@ The script reports the active CSS breakpoint at the top left of the page. Clicki
 * the size of the window
 * userAgent, pixel density and screen size
 * a button to activate a script to get information about the uploaded images using the `picture` tag
-* Alcune impostazioni vengono salvate nella memoria della sessione del browser, in modo che, quando la pagina viene ricaricata, il loro stato viene ripristinato a quanto precedentemente impostato
+
+> **NB:** this option sets all picture tags position to `relative`, that can broke your layout 
+
+* Some settings are saved in the browser session storage, so that, when the page is reloaded, their status is restored.
