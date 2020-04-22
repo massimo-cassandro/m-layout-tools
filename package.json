@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/massimo-cassandro/m-layout-tools.git#master"
   },
+  "keywords": [
+    "front-end-development",
+    "foundation",
+    "images",
+    "bootstrap",
+    "tools"
+  ],
   "author": "Massimo Cassandro",
   "license": "MIT",
   "bugs": {
