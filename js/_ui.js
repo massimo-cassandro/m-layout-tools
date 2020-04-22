@@ -30,8 +30,8 @@ export default function () {
   lt.wrapper.innerHTML = `<div class="lt-inner-wrapper">
       <div class="lt-content">
         <div>
-          <button class="lt-hide-show-btn">Nascondi</button>
-          <button class="lt-remove-btn">Elimina</button>
+          <button class="lt-hide-show-btn">Hide</button>
+          <button class="lt-remove-btn">Remove</button>
         </div>
       </div>
       <div class="lt-brkpt">&#x2732;</div>
@@ -55,7 +55,7 @@ export default function () {
         toolbar.toggleAttribute('hidden', is_hidden);
       });
 
-      hide_btn.innerHTML = is_hidden ? 'Mostra' : 'Nascondi';
+      hide_btn.innerHTML = is_hidden ? 'Show' : 'Hide';
       if(add_storage) {
         lt.store_settings({hidden: is_hidden});
       }

@@ -131,6 +131,9 @@
       color: $lt-bg;
     }
   }
+  input[type=checkbox] {
+    margin-right:6px;
+  }
 
   @media print {
     display: none;
