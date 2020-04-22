@@ -14,9 +14,8 @@ export default function () {
 
   const picturesInfoTrigger = lt.content_wrapper.querySelector('.lt-pictures-info-trigger'),
     removePicturesInfo = () => {
-      [...pictures].forEach(element => {
-        element.querySelector('.lt-picture-info-wrapper').remove();
-        element.classList.remove('lt-position-relative');
+      document.querySelectorAll('.lt-picture-info-wrapper').forEach(item => {
+        item.remove();
       });
     },
     shortenSrcString = (str) => {
@@ -47,8 +46,6 @@ export default function () {
     showPicturesInfo = () => {
 
       [...pictures].forEach(element => {
-        // detect if picture element is positioned
-        let element_position = window.getComputedStyle(element).getPropertyValue('position');
 
         const img_info_rows = () => {
           const img_props = [
@@ -79,22 +76,18 @@ export default function () {
           return rows;
         };
 
-        element.insertAdjacentHTML('beforeend',
-          `<div class="lt-picture-info-wrapper">
-          <details>
+        element.insertAdjacentHTML('afterend',
+          `<details class="lt-picture-info-wrapper">
             <summary>Info</summary>
             <table>
               <tbody>
                 ${img_info_rows()}
               </tbody>
             </table>
-          </details>
-        </div>`
+          </details>`
         );
 
-        if( element_position === 'static' ) {
-          element.classList.add('lt-position-relative');
-        }
+
 
       }); // end foreach
     }, // end showPicturesInfo
