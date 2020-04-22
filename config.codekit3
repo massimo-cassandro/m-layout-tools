@@ -527,12 +527,12 @@
 		"oAP": "/test/imgs/BS4-xs-546px@3x.webp",
 		"oF": 0
 		},
-	"/test/layout_tools_test.html": {
+	"/test/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/test/layout_tools_test.html",
+		"oAP": "/test/index.html",
 		"oF": 0
 		}
 	},

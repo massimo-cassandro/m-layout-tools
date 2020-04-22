@@ -1,5 +1,7 @@
 export let lt = {
-  vers: '3.0'
+  vers: '3.0',
+  times: '&VeryThinSpace;&times;&VeryThinSpace;', // carattere x e spaziatura
+  unitSpacing: '&VeryThinSpace;'
 };
 
 export default function() {

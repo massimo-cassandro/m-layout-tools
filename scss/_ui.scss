@@ -1,3 +1,13 @@
+/*
+  <div id="lt-wrapper">
+    <div class="lt-inner-wrapper">
+      <div class="lt-content">
+        <div role="button" class="lt-hide-show">Nascondi</div>
+      </div>
+      <div class="lt-brkpt">&#x2732;</div>
+    </div>
+  </div>
+*/
 #lt-wrapper {
   font-family: sans-serif;
   font-size: small;
@@ -9,81 +19,89 @@
   background: transparent;
   transition:opacity .3s linear;
 
-  .lt-inner-wrapper,
-  .lt-content {
+  .lt-inner-wrapper{
 
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: stretch;
-  }
-
-  button, [role="button"] {
-    // border:1px solid $lt-color;
-    // border-radius:3px;
-    // margin:0;
-    background: $lt-bg;
-    cursor: pointer;
-    &:hover {
-      background: $lt-color;
-      color: $lt-bg;
-    }
-  }
-
-
-
-  .lt-brkpt {
-    box-sizing: border-box;
-    border-width: 1px;
-    border-color: $lt-color;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .lt-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border:1px solid $lt-color;
+    border-bottom-right-radius:8px;
+
     overflow: hidden;
-    width: auto;
+    width: 100vw;
+    max-width:14rem;
     background: $lt-bg;
 
     > div {
-      padding: 2px 6px;
-      border-width:1px;
-      border-color:$lt-color;
-      border-style: solid dotted solid none;
+      padding: 6px;
+      width:100%;
 
-      &:last-child {
-        border-right-style: solid;
-        //border-bottom-right-radius: 50%;
+      &:not(:last-child) {
+        border-bottom:2px solid $lt-color;
       }
     }
   }
 
-  .lt-brkpt {
-    font-weight: bold;
-    padding: 0px 6px 0px 3px;
-    color:$lt-color;
-    border-radius: 0 1em 1em 0;
-    background: $lt-bg;
-    cursor: pointer;
+  .lt-content, .lt-brkpt {
+    border-width: 2px;
+    border-color: $lt-color;
     border-style: solid solid solid none;
-
-    &:hover {
-      color: $lt-bg;
-      background: $lt-color;
-    }
   }
-
-
 
   .lt-content>div,
   .lt-brkpt {
     flex: 0 1 auto;
   }
+
   .lt-brkpt {
+    box-sizing: border-box;
+    font-size: small;
+
+
+    font-weight: bold;
+    padding: 1px 6px 1px 3px;
+    color:$lt-color;
+    border-radius: 0 1em 1em 0;
+    background: $lt-bg;
+    cursor: pointer;
+
     display: flex;
     justify-content: center;
     align-items: center;
     height:1.5em;
+
+
+    &:hover {
+      color: $lt-bg;
+      background: $lt-color;
+    }
   }
+
+  dl {
+    margin:0;
+    dt {
+      font-weight: bold;
+    }
+    dd {
+      padding-left:1rem;
+      &:not(:last-child) {
+        border-bottom:1px dotted $lt-color;
+        margin-bottom:.4rem;
+        padding-bottom:.2rem;
+      }
+    }
+  }
+
 
   &.lt-collapsed .lt-content {
     display: none;
@@ -96,13 +114,25 @@
       opacity: .8;
     }
   }
+  .heading {
+    font-weight: bold;
+    font-size: 110%;;
+  }
+  button {
+    border:1px solid $lt-color;
+    border-radius:3px;
+    padding: 2px 6px;
+    margin-right:6px;
+    background: $lt-bg;
+    color:$lt-color;
+    cursor: pointer;
+    &:hover {
+      background: $lt-color;
+      color: $lt-bg;
+    }
+  }
 
   @media print {
     display: none;
   }
-}
-
-summary {
-  font-weight: bold;
-  outline:0;
-}
+} // end #lt-wrapper

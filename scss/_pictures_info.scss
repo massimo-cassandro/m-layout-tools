@@ -5,11 +5,15 @@
   position: absolute;
   top:20px;
   left:5px;
-  background: #fff;
+  background: $lt-bg;
+  color: $lt-color;
+  border: 1px $lt-color solid;
   padding: 6px;
-  font-size: .8rem;
+  font-size: small;
+  border-radius: 4px;
   summary {
     white-space: nowrap;
+    font-size: 110%;
   }
 
   table {
@@ -17,13 +21,15 @@
     width:100%;
     th, td {
       padding:2px 4px;
-      border-bottom:1px solid $lt-color;
       text-align: left;
       vertical-align: top;
       white-space: nowrap;
     }
     th {
       font-weight: bold;
+    }
+    tr:not(:last-child) {
+      border-bottom:1px dotted $lt-color;
     }
   }
 }

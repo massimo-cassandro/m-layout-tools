@@ -1,29 +1,40 @@
-# Layout Tools
+# Layout Tools (v. 3)
 
-Utilità per lo sviluppo di layout.
+Layout development utility.
 
-Versione 3
+Demo: <https://massimo-cassandro.github.io/m-layout-tools/test/>
 
-## Installazione
+## Installation
 
-Installare lo script con npm:
+Install Layout Tools using npm:
 
 ```shell
 npm i --save-dev m-layout-tools
 ```
 
-Aggiungere quindi alla pagina desiderata:
+Then add it to the page to be monitored:
 
 ```html
 <script src="[path_to_layout_tools]/layout_tools-min.js" data-fw="__framework__"></script>
 ```
-in cui `__framework__` corrisponde alla sigla del framework utilizzato: **bootstrap3**, **bootstrap4**, **foundation6**, ecc. Se non inserito, il default è `bootstrap4`. 
+where `__framework__` corresponds to the used css framework.
+Choose between **bootstrap3**, **bootstrap4** or **foundation6**. 
 
-## Uso
+Default is `bootstrap4`. 
 
-Lo script aggiunge in alto a sinistra nella pagina un indicatore del breakpoint css attivo. Espandendolo con un clic vengono visualizzati:
+The scripts loads the `layout_tools.css` file searching for it in same folder of the js one. If necessary, you can set an alternative css path thru the `data-css` attribute:
 
-* un pulsante per rendere invisibile il tool (per renderlo nuovamente visibile è necessario posizione il cursore sopra il pulsante, che in hover diventa semitrasparante, e fare clic di nuovo. Se presente viene nascosta anche la barra di debug di Symfony. Opzionalmente, si può decidere di rimuovere completamente il markup di layout tools (e la barra di Symfony) per i casi in cui siano necessario eliminarli completamente per demo, documentazione ecc... 
-* la dimensione del viewport
-* userAgent, pixel density e dimensioni dello schermo
-* un pulsante per l'attivazione di uno script per la verifica delle immagini responsive caricate tramite il tag `picture`
+```html
+<script src="[path_to_layout_tools]/layout_tools-min.js" data-css="path/layout_tools.css"></script>
+```
+
+## The tools
+
+The script reports the active CSS breakpoint at the top left of the page. Clicking on it will display:
+
+* a button to hide the layout tools (it remains translucent on mouseover). To show it again you need to click the button again. If present, the Symfony debug bar is also hidden. You can add more toolbars to be removed by editing the `other_toolbars_selectors` constant in the` _ui.js` module
+* a button to completely remove layout tools and other toolbars. This is useful when you need to completely delete all toolbars for demonstration and documentation purposes. When the page reloads, all tools will be visible again
+* the size of the window
+* userAgent, pixel density and screen size
+* a button to activate a script to get information about the uploaded images using the `picture` tag
+* Alcune impostazioni vengono salvate nella memoria della sessione del browser, in modo che, quando la pagina viene ricaricata, il loro stato viene ripristinato a quanto precedentemente impostato
