@@ -22,6 +22,7 @@
 
     <p><a href="https://github.com/massimo-cassandro/m-layout-tools">Back to repo</a></p>
 
+    <p>Image loaded with <code>picture</code> tag:</p>
     <picture>
       <!-- BS4 XL -->
       <source type="image/webp" srcset="imgs/BS4-xl-1110px.webp, imgs/BS4-xl-1110px@2x.webp 2x"
@@ -57,17 +58,13 @@
       <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@gijsparadijs?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Gijs Coolen"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Gijs Coolen</span></a>
     </div>
 
-    <div class="row">
-      <div class="col-sm-6">
-        <picture>
-          <!-- SM + MD -->
-          <source srcset="imgs/BS4-6cols-350px.jpg"
-            media="(min-width: 576px) and (max-width: 991px)">
-          <img src="imgs/BS4-6cols-505px.jpg"
-            alt="Foto arialqadri / Unsplash"  class="img-fluid d-block">
-        </picture>
-      </div>
-    </div>
+
+    <p>Image loaded with <code>img</code> tag only:</p>
+    <p><img src="imgs/BS4-foto2-550px.jpg"
+      srcset="imgs/BS4-foto2-550px.jpg 550w, imgs/BS4-foto2-1110px.jpg 1110w"
+      sizes="(min-width:48em) 1110px, 100vw"
+      alt="Foto arialqadri / Unsplash"  class="img-fluid d-block"></p>
+
 
     <div class="mt-2">
       <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@arialqadri22?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from arialqadri -"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">arialqadri -</span></a>

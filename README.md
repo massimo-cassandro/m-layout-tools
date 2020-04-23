@@ -36,8 +36,5 @@ The script reports the active CSS breakpoint at the top left of the page. Clicki
 * a button to completely remove layout tools and other toolbars. This is useful when you need to completely delete all toolbars for demonstration and documentation purposes. When the page reloads, all tools will be visible again
 * the size of the window
 * userAgent, pixel density and screen size
-* a button to activate a script to get information about the uploaded images using the `picture` tag
-
-> **NB:** this option sets all picture tags position to `relative`, that can broke your layout 
-
+* a checkbox to show informations about all the images that are loaded with the page.
 * Some settings are saved in the browser session storage, so that, when the page is reloaded, their status is restored.
