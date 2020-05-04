@@ -117,7 +117,10 @@
   }
   .heading {
     font-weight: bold;
-    font-size: 110%;;
+    font-size: 110%;
+  }
+  label {
+    color:$lt-color;
   }
   button {
     border:1px solid $lt-color;
