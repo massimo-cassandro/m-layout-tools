@@ -1,6 +1,6 @@
 {
   "name": "m-layout-tools",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "Layout development Utilities",
   "main": "js/layout_tools.js",
   "scripts": {
