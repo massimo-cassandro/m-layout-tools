@@ -120,7 +120,7 @@ export default function () {
     imgsInfoTrigger.checked = true;
   }
 
-  if(ResizeObserver) {
+  if('ResizeObserver' in window) {
 
     const resizeObserver = new ResizeObserver(() => {
       if( imgsInfoTrigger.checked ) {

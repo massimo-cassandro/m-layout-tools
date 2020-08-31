@@ -35,7 +35,8 @@ export default function () {
 
 
   getViewportSize();
-  if(ResizeObserver) {
+
+  if('ResizeObserver' in window) {
 
     const resizeObserver = new ResizeObserver(() => {
       getViewportSize();
