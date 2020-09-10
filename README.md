@@ -2,14 +2,14 @@
 
 Layout development utility.
 
-Demo: <https://massimo-cassandro.github.io/m-layout-tools/test/>
+Demo: <https://massimo-cassandro.github.io/layout-tools/test/>
 
 ## Installation
 
 Install Layout Tools using npm:
 
 ```shell
-npm i --save-dev m-layout-tools
+npm i --save-dev @massimo-cassandro/layout-tools
 ```
 
 Then add it to the page to be monitored:
