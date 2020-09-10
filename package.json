@@ -1,5 +1,5 @@
 {
-  "name": "m-layout-tools",
+  "name": "@massimo-cassandro/layout-tools",
   "version": "3.1.4",
   "description": "Layout development Utilities",
   "main": "js/layout_tools.js",
