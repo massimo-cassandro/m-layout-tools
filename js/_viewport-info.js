@@ -1,4 +1,4 @@
-import {lt} from './_init';
+import {lt} from './_settings';
 
 export default function () {
   'use strict';

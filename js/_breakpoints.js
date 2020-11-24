@@ -1,5 +1,4 @@
-import {lt} from './_init';
-
+import {lt} from './_settings';
 /*
   caricamento indicatori breakpoint e dimensioni viewport
 
@@ -12,9 +11,6 @@ import {lt} from './_init';
 */
 
 export default function () {
-
-  let dt_params = {};
-  dt_params.fw = document.currentScript.getAttribute('data-fw') || 'bootstrap4';
 
   const fw_breakpoints_map= {
 
@@ -35,8 +31,8 @@ export default function () {
         '<span class="show-for-xlarge">xlarge</span>'
   };
 
-  if(dt_params.fw) {
-    lt.brkpt_wrapper.innerHTML = fw_breakpoints_map[dt_params.fw];
+  if(lt.framework) {
+    lt.brkpt_wrapper.innerHTML = fw_breakpoints_map[lt.framework];
   }
 
 }

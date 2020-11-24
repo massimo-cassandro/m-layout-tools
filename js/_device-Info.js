@@ -1,7 +1,6 @@
-import {lt} from './_init';
+import {lt} from './_settings';
 
 export default function () {
-  'use strict';
 
   //device info
 
@@ -24,7 +23,5 @@ export default function () {
         ${window.screen.width}${lt.times}${window.screen.height}${lt.unitSpacing}px
       </dd>
     </dl>`;
-
-  return lt;
 
 }

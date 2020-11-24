@@ -38,3 +38,10 @@ The script reports the active CSS breakpoint at the top left of the page. Clicki
 * userAgent, pixel density and screen size
 * a checkbox to show informations about all the images that are loaded with the page.
 * Some settings are saved in the browser session storage, so that, when the page is reloaded, their status is restored.
+
+
+## TODO
+* rewrite modules
+* clean old code
+* optimize variables
+* build as a class
