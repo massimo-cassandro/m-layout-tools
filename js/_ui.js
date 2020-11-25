@@ -1,7 +1,6 @@
 import {lt} from './_settings';
 
 export default function () {
-  'use strict';
 
   // le toolbar aggiuntive possono essere caricate dopo layout tools
   // e vengono quindi elborate dai selettori indicati in `other_toolbars_selectors`
@@ -57,7 +56,7 @@ export default function () {
 
       hide_btn.innerHTML = is_hidden ? 'Show' : 'Hide';
       if(add_storage) {
-        lt.store_settings({hidden: is_hidden});
+        lt.upd_settings({hidden: is_hidden});
       }
     };
 
@@ -76,6 +75,6 @@ export default function () {
       toolbar.remove();
     });
     // la barra viene mostrata al successivo reload
-    lt.store_settings({hidden: false});
+    lt.upd_settings({hidden: false});
   });
 }

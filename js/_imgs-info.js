@@ -106,7 +106,7 @@ export default function () {
     }; // end updImgsInfo
 
   imgsInfoTrigger.addEventListener('click', () => {
-    lt.store_settings({imgs_info: imgsInfoTrigger.checked});
+    lt.upd_settings({imgs_info: imgsInfoTrigger.checked});
 
     if( imgsInfoTrigger.checked ) {
       showImgsInfo();
