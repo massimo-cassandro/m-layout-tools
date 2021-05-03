@@ -98,8 +98,10 @@ export default function () {
       ];
       [...imgs].forEach(img => {
         upd_img_props.forEach(prop => {
-          img.nextElementSibling.querySelector(`td.lt-img-${prop}`).innerHTML =
-            formatPropValue(prop, img[prop]);
+          let sibling =img.nextElementSibling.querySelector(`td.lt-img-${prop}`);
+          if(sibling) {
+            sibling.innerHTML = formatPropValue(prop, img[prop]);
+          }
         });
       }); // end foreach
 
