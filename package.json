@@ -30,5 +30,10 @@
     "dist/*.{css,js,map}",
     "js/*.js",
     "scss/*.scss"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-twbs-bootstrap": "^2.2.0"
+  }
 }
