@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/layout-tools",
-  "version": "3.3.1",
+  "version": "3.4.0",
   "description": "Layout development Utilities",
   "main": "js/layout_tools.js",
   "scripts": {
@@ -32,7 +32,13 @@
     "scss/*.scss"
   ],
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "eslint": "^7.28.0",
+    "rollup": "^2.52.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.35.1",
     "stylelint": "^13.13.1",
     "stylelint-config-twbs-bootstrap": "^2.2.0"
   }

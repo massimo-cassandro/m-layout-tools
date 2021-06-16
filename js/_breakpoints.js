@@ -25,6 +25,13 @@ export default function () {
         '<span class="d-none d-lg-inline d-xl-none">lg</span>' +
         '<span class="d-none d-xl-inline">xl</span>',
 
+    bootstrap5  : '<span class="d-sm-none">xs</span>' +
+        '<span class="d-none d-sm-inline d-md-none">sm</span>' +
+        '<span class="d-none d-md-inline d-lg-none">md</span>' +
+        '<span class="d-none d-lg-inline d-xl-none">lg</span>' +
+        '<span class="d-none d-xl-inline d-xxl-none">lg</span>' +
+        '<span class="d-none d-xxl-inline">xxl</span>',
+
     foundation6 : '<span class="show-for-small-only">small</span>' +
         '<span class="show-for-medium-only">medium</span>' +
         '<span class="show-for-large-only">large</span>' +
