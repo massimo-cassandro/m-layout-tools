@@ -25,7 +25,7 @@ export default function () {
         '<span class="d-none d-lg-inline d-xl-none">lg</span>' +
         '<span class="d-none d-xl-inline">xl</span>',
 
-    bootstrap5  : '<span class="d-sm-none">xs</span>' +
+    BS5  : '<span class="d-sm-none">xs</span>' +
         '<span class="d-none d-sm-inline d-md-none">sm</span>' +
         '<span class="d-none d-md-inline d-lg-none">md</span>' +
         '<span class="d-none d-lg-inline d-xl-none">lg</span>' +
@@ -37,6 +37,7 @@ export default function () {
         '<span class="show-for-large-only">large</span>' +
         '<span class="show-for-xlarge">xlarge</span>'
   };
+
 
   if(lt.framework) {
     lt.brkpt_wrapper.innerHTML = fw_breakpoints_map[lt.framework];
